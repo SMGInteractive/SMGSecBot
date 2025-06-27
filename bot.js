@@ -32,6 +32,11 @@ function createBot() {
   bot.once("login", () => {
     console.log("✅ [login] successful — in game world.");
 
+        setTimeout(() => {
+      console.log("🫥 Sending /LOGIN command");
+      bot.chat("/login Securitybysmg007");
+    }, 3000);
+  });
     // Wait a moment before sending /vanish
     setTimeout(() => {
       console.log("🫥 Sending /vanish command");
@@ -49,17 +54,5 @@ function createBot() {
     }, 30000);
   });
 
-  // Login/Register automation
-  bot.on("message", (msg) => {
-    const text = msg.toString().toLowerCase();
-    if (text.includes("register")) {
-      console.log("🔐 Detected register prompt, sending /register");
-      bot.chat(`/register ${PASSWORD} ${PASSWORD}`);
-    } else if (text.includes("login")) {
-      console.log("🔐 Detected login prompt, sending /login");
-      bot.chat(`/login ${PASSWORD}`);
-    }
-  });
-}
 
 createBot();
