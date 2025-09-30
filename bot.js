@@ -2,9 +2,9 @@
 const mineflayer = require("mineflayer");
 
 const HOST = "play.smgin.me";
-const PORT = 58073;
+const PORT = 11289;
 const USERNAME = "SMGSecurity";
-const VERSION = "1.21.4"; // or "auto"
+const VERSION = "1.21.8"; // or "auto"
 const PASSWORD = "Securitybysmg007";
 
 function createBot() {
@@ -56,3 +56,4 @@ function createBot() {
 }
 
 createBot();
+
