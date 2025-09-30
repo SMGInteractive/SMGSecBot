@@ -6,6 +6,10 @@ on:
     - cron: '10 */6 * * *'     # Every 6 hours at 10 min past the hour
   workflow_dispatch:           # Manual trigger button on GitHub
 
+concurrency:
+  group: run-minecraft-bot
+  cancel-in-progress: true
+
 jobs:
   run:
     runs-on: ubuntu-latest
