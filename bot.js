@@ -84,6 +84,9 @@ function createBot() {
     console.log('✅ [login] — connected');
     reconnectBackoff = 1000; // reset
 
+    // Send the login command with password as chat immediately upon joining
+    bot.chat(`/login ${PASSWORD}`);
+
     // Optional: request spectator mode, but only when AUTHORIZED === true
     if (AUTHORIZED) {
       scheduleOnce(() => {
